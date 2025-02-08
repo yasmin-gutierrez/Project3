@@ -8,18 +8,18 @@ import {ref} from 'vue';
 
     <div class="container">
       <h1>Countdown Timer</h1>
+
       <div class="content">
-        <h3>Set Timer</h3>
-        <form @submit.prevent="StartCountdown">
-          <h4>Enter time (in seconds):</h4>
-          <input type="number" v-model.number="timeInput" max="60" min="1" placeholder="Seconds" />
-          <input type="submit" value="Start Countdown" />
-        </form>
+        <label for="timeInput">Enter time (in seconds):</label>
+        <input type="number" v-model="timeInput" max="60" min="1" placeholder="Seconds" />
+      </div>
+
+      <button @click="startCountdown" class="start-button">Start Countdown</button>
+
+      <div class="timer">
+
+
       </div>
     </div>
-
-    
-
   </main>
-
 </template>
